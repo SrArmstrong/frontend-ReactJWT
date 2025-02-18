@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 
 const Login = () => {
@@ -57,6 +57,7 @@ const Login = () => {
             </button>
           </div>
         </form>
+        <p>¿No tienes cuenta? <Link to="/register" className="text-primary fw-bold">Registrate aquí</Link></p>
       </div>
 
       <div className={`modal ${showModal ? 'show' : ''}`} tabIndex="-1" style={{ display: showModal ? 'block' : 'none' }}>
